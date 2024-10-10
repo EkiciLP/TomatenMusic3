@@ -8,6 +8,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    id("com.gradleup.shadow") version "8.3.3"
 }
 
 repositories {
@@ -23,6 +24,9 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+    implementation(libs.javacord)
+    implementation(libs.dotenv)
+    implementation(libs.log4j)
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -35,6 +39,13 @@ java {
 application {
     // Define the main class for the application.
     mainClass = "net.tomatentum.tomatenmusic3.App"
+}
+
+
+tasks.withType<Jar> {
+    manifest {
+        attributes["Main-Class"] = application.mainClass
+    }
 }
 
 tasks.named<Test>("test") {
