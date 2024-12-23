@@ -1,0 +1,11 @@
+<configuration>
+  <appender name="jline" class="net.tomatentum.tomatenmusic3.JlineAppender">
+    <encoder>
+      <pattern>%d{STRICT} %-30.-30t %-56([%boldWhite(%logger{40})]) %highlight(%p): %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="info">
+    <appender-ref ref="jline" />
+  </root>
+</configuration>

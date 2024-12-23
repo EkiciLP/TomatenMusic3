@@ -14,6 +14,9 @@ plugins {
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
+    maven {
+        url = uri("https://git.tomatentum.net/api/packages/tueem/maven")
+    }
 }
 
 dependencies {
@@ -23,16 +26,23 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
     // This dependency is used by the application.
-    implementation(libs.guava)
     implementation(libs.javacord)
     implementation(libs.dotenv)
-    implementation(libs.log4j)
+    implementation(libs.slf4j)
+    implementation(libs.logback)
+    implementation(libs.log4jtoslf4j)
+    implementation(libs.jultoslf4j)
+    implementation(libs.jline)
+
+    implementation(libs.marinaralib)
+    implementation(libs.marinarajavacord)
+
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(23)
     }
 }
 
