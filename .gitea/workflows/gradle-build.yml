@@ -13,11 +13,11 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Set up JDK
-      uses: actions/setup-java@v4
+      uses: java@v4
       with:
         java-version: '23'
         check-latest: true
-        distribution: 'zulu'
+        distribution: 'temurin'
 
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v4
