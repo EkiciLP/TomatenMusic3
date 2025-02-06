@@ -1,12 +1,8 @@
 package net.tomatentum.tomatenmusic3;
 
-import java.io.IOException;
-
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
 import org.javacord.api.entity.intent.Intent;
-import org.jline.terminal.Terminal;
-import org.jline.terminal.TerminalBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,7 +22,6 @@ public class App {
     private Config config;
     private DiscordApi client;
     private Logger logger = LoggerFactory.getLogger(getClass());
-    private Terminal terminal;
 
     private Marinara marinara;
 
@@ -37,7 +32,6 @@ public class App {
         LoggerContext loggerctx = (LoggerContext) LoggerFactory.getILoggerFactory();
         if (config.isDevelopment())
             loggerctx.getLogger("root").setLevel(Level.DEBUG);
-        initJline();
     }
 
     public void connect() {
@@ -47,15 +41,6 @@ public class App {
             .login().join();
         initMarinara();
         logger.info("connected as {}", client.getYourself().getName());
-    }
-
-    private void initJline() {
-        try {
-            this.terminal = TerminalBuilder.terminal();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        JlineAppender.Terminal = this.terminal;
     }
 
     private void initMarinara() {

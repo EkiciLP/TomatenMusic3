@@ -1,11 +1,11 @@
 <configuration>
-  <appender name="jline" class="net.tomatentum.tomatenmusic3.JlineAppender">
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
     <encoder>
-      <pattern>%d{STRICT} %-30.-30t %-56([%boldWhite(%logger{40})]) %highlight(%p): %msg%n</pattern>
+      <pattern>%d{STRICT} %-20.-20t %-46([%boldWhite(%logger{30})]) %highlight(%p): %msg%n</pattern>
     </encoder>
   </appender>
 
   <root level="info">
-    <appender-ref ref="jline" />
+    <appender-ref ref="STDOUT" />
   </root>
 </configuration>

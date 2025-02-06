@@ -32,7 +32,6 @@ dependencies {
     implementation(libs.logback)
     implementation(libs.log4jtoslf4j)
     implementation(libs.jultoslf4j)
-    implementation(libs.jline)
 
     implementation(libs.marinaralib)
     implementation(libs.marinarajavacord)
