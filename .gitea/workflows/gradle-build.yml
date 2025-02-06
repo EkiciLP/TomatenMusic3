@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Set up JDK
-      uses: java@v4
+      uses: setup-java@v4
       with:
         java-version: '23'
         check-latest: true
