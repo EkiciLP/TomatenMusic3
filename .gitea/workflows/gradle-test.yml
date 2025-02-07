@@ -40,9 +40,10 @@ jobs:
 
       - name: Move Test Results
         if: always()
+        continue-on-error: true
         run: |
           mkdir test-results/;
-          [ -d app/build/test-results/test/ ] && mv app/build/test-results/test/*.xml test-results/;
+          [ -d app/build/test-results/test/ ] && mv app/build/test-results/test/*.xml test-results/ || true
 
       - name: Upload Test Result
         uses: christopherhx/gitea-upload-artifact@v4
