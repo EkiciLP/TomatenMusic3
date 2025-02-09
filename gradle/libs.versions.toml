@@ -10,6 +10,7 @@ slf4j = "2.0.16"
 log4jtoslf4j = "2.24.3"
 jultoslf4j = "2.0.16"
 marinara = "1.0.0-RC1-9d88ca9"
+lavalink = "3.1.0"
 
 [libraries]
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
@@ -19,6 +20,7 @@ logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback"}
 slf4j = { module = "org.slf4j:slf4j-api", version.ref = "slf4j"}
 log4jtoslf4j = { module = "org.apache.logging.log4j:log4j-to-slf4j", version.ref = "log4jtoslf4j"}
 jultoslf4j = { module = "org.slf4j:jul-to-slf4j", version.ref = "jultoslf4j"}
+lavalink = { module = "dev.arbjerg:lavalink-client", version.ref = "lavalink"}
 
 marinaralib = { module = "net.tomatentum.Marinara:lib-dev", version.ref = "marinara"}
 marinarajavacord = { module = "net.tomatentum.Marinara:wrapper-javacord-dev", version.ref = "marinara"}

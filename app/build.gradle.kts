@@ -14,9 +14,8 @@ plugins {
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
-    maven {
-        url = uri("https://git.tomatentum.net/api/packages/tueem/maven")
-    }
+    maven("https://maven.lavalink.dev/releases")
+    maven("https://git.tomatentum.net/api/packages/tueem/maven")
 }
 
 dependencies {
@@ -32,6 +31,7 @@ dependencies {
     implementation(libs.logback)
     implementation(libs.log4jtoslf4j)
     implementation(libs.jultoslf4j)
+    implementation(libs.lavalink)
 
     implementation(libs.marinaralib)
     implementation(libs.marinarajavacord)

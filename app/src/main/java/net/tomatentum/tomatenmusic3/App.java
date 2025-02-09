@@ -50,4 +50,5 @@ public class App {
         
         marinara.getRegistry().registerCommands();
     }
+
 }
