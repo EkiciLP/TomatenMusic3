@@ -9,6 +9,7 @@ logback = "1.5.15"
 slf4j = "2.0.16"
 log4jtoslf4j = "2.24.3"
 jultoslf4j = "2.0.16"
+jackson = "2.18.2"
 marinara = "1.0.0-RC1-9d88ca9"
 lavalink = "3.1.0"
 
@@ -20,6 +21,7 @@ logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback"}
 slf4j = { module = "org.slf4j:slf4j-api", version.ref = "slf4j"}
 log4jtoslf4j = { module = "org.apache.logging.log4j:log4j-to-slf4j", version.ref = "log4jtoslf4j"}
 jultoslf4j = { module = "org.slf4j:jul-to-slf4j", version.ref = "jultoslf4j"}
+jackson = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson"}
 lavalink = { module = "dev.arbjerg:lavalink-client", version.ref = "lavalink"}
 
 marinaralib = { module = "net.tomatentum.Marinara:lib-dev", version.ref = "marinara"}

@@ -31,6 +31,7 @@ dependencies {
     implementation(libs.logback)
     implementation(libs.log4jtoslf4j)
     implementation(libs.jultoslf4j)
+    implementation(libs.jackson)
     implementation(libs.lavalink)
 
     implementation(libs.marinaralib)
