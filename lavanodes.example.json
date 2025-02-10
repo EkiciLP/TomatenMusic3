@@ -1,0 +1,9 @@
+[
+    {
+        "name": "node1",
+        "host": "localhost",
+        "port": 2333,
+        "password": "youshallnotpass",
+        "regionGroup": "EUROPE"
+    }
+]
