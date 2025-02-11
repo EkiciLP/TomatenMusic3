@@ -6,6 +6,8 @@ import org.javacord.api.entity.intent.Intent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.fasterxml.jackson.core.JsonFactory;
+
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.LoggerContext;
 import io.github.cdimascio.dotenv.Dotenv;
@@ -19,6 +21,7 @@ public class App {
         new App().connect();  
     }
 
+    private JsonFactory jsonFactory;
     private Config config;
     private DiscordApi client;
     private Logger logger = LoggerFactory.getLogger(getClass());
@@ -26,6 +29,7 @@ public class App {
     private Marinara marinara;
 
     private App() {
+        this.jsonFactory = JsonFactory.builder().build();
         Dotenv env = Dotenv.configure().ignoreIfMissing().load();
         this.config = new Config(env);
 
